@@ -9,7 +9,9 @@ Built as part of the Maketronics Tech Challenge to demonstrate data scraping, AP
 
 ## 🚀 Live Demo
 
-> Coming soon — Will be deployed on Vercel + Render (or use `localhost`)
+> https://smart-data-display-six.vercel.app/
+> Render for backend
+>Vercel for frontend
 
 ---
 
