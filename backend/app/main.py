@@ -5,10 +5,13 @@ from app.scraper_ai import get_ai_tools
 
 app = FastAPI()
 
-# ✅ Enable CORS for local frontend (React on port 3000)
+# ✅ Enable CORS for both local and deployed frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],  # Frontend origin
+    allow_origins=[
+        "http://localhost:3000",  # Local React dev server
+        "https://smart-data-display-six.vercel.app"  # ✅ Vercel production frontend
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
