@@ -4,22 +4,114 @@
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
+    <meta name="theme-color" content="#7c3aed" />
     
     <meta
       name="description"
-      content="Smart Data Display – View trending books and top AI tools with a clean, responsive interface."
+      content="Smart Data Display – Discover trending books and top AI tools with a beautiful, responsive interface featuring premium glassmorphism design."
     />
-    <meta name="keywords" content="books, AI tools, React, FastAPI, Tailwind, smart data app" />
+    <meta name="keywords" content="books, AI tools, React, FastAPI, Tailwind, smart data app, trending books, AI discovery, glassmorphism" />
     <meta name="author" content="Vishal" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yourwebsite.com/" />
+    <meta property="og:title" content="📗 Smart Data Display - Books & AI Tools" />
+    <meta property="og:description" content="Discover trending books and top AI tools with our premium glassmorphism interface." />
+    <meta property="og:image" content="%PUBLIC_URL%/og-image.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://yourwebsite.com/" />
+    <meta property="twitter:title" content="📗 Smart Data Display - Books & AI Tools" />
+    <meta property="twitter:description" content="Discover trending books and top AI tools with our premium glassmorphism interface." />
+    <meta property="twitter:image" content="%PUBLIC_URL%/og-image.png" />
 
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
-    <title>📊 Smart Data Display</title>
+    <!-- Preload critical fonts for better performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Add some premium styling to body -->
+    <style>
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+          'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+          sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background: linear-gradient(135deg, #4c1d95 0%, #7c3aed 50%, #3730a3 100%);
+        min-height: 100vh;
+        overflow-x: hidden;
+      }
+      
+      /* Loading animation */
+      .loading-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #4c1d95 0%, #7c3aed 50%, #3730a3 100%);
+      }
+      
+      .loading-spinner {
+        width: 40px;
+        height: 40px;
+        border: 4px solid rgba(255, 255, 255, 0.3);
+        border-top: 4px solid #fff;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      
+      /* Hide scrollbar for cleaner look */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      
+      ::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.1);
+      }
+      
+      ::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 3px;
+      }
+      
+      ::-webkit-scrollbar-thumb:hover {
+        background: rgba(255, 255, 255, 0.5);
+      }
+    </style>
+
+    <title>📗 Smart Data Display - Books & AI Tools</title>
   </head>
-  <body class="bg-gray-100">
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+  <body>
+    <noscript>
+      <div style="display: flex; justify-content: center; align-items: center; min-height: 100vh; background: linear-gradient(135deg, #4c1d95 0%, #7c3aed 50%, #3730a3 100%); color: white; font-family: sans-serif; text-align: center; padding: 20px;">
+        <div>
+          <h1 style="font-size: 2rem; margin-bottom: 1rem;">📗 Smart Data Display</h1>
+          <p style="font-size: 1.2rem; margin-bottom: 2rem;">You need to enable JavaScript to run this app.</p>
+          <p style="font-size: 1rem; opacity: 0.8;">Please enable JavaScript in your browser settings and refresh the page.</p>
+        </div>
+      </div>
+    </noscript>
+    
+    <div id="root">
+      <!-- Loading fallback with matching design -->
+      <div class="loading-container">
+        <div style="text-align: center; color: white;">
+          <div class="loading-spinner" style="margin: 0 auto 20px;"></div>
+          <h2 style="font-size: 1.5rem; margin-bottom: 0.5rem;">📗 Smart Data Display</h2>
+          <p style="opacity: 0.8; font-size: 1rem;">Loading amazing content...</p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
